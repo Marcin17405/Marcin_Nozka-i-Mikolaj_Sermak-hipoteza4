@@ -10,14 +10,14 @@ def encrypt(decrypted):
 
 def decrypt(encrypted):
     decrypted = ""
-    for i in encrypted:
-        key = i + 1
-        if (ord(encryped) - key < 97):
-            decrypted += chr(ord(encrypted) - key + 26)
+    for i in range(len(encrypted)):
+        key =i+1
+        if (ord(encrypted[i]) - key < 97):
+            decrypted += chr(ord(encrypted[i]) - key + 26)
         else:
-            decrypted += chr(ord(encrypted) - key)
+            decrypted += chr(ord(encrypted[i]) - key)
     return decrypted
 
 
-# print(encrypt("abc"))
-print(decrypt("bdf"))
+print("Zakodowane",encrypt("abc"))
+print("Odkodowane",decrypt("bdf"))
